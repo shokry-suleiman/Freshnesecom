@@ -1,0 +1,26 @@
+.spliter {
+    width: 1px;
+}
+
+nav {
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
+.notify {
+    background-color: #E5704B;
+    width: 16px;
+    height: 16px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    bottom: -5px;
+    right: 25px;
+}
+
+.dropdown-menu {
+    height: 180px;
+    overflow: auto;
+}
+
+.hover:hover {
+    background: #F9F9F9;
+}

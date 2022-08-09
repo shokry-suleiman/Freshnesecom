@@ -1,0 +1,24 @@
+@import "theme-colors.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+$theme-colors: (
+  "primary": $primary,
+  "dark": $dark,
+  "white": $white,
+  "secondary":$secondary,
+  "gray1":$gray1,
+  "gray2":$gray2,
+  "gray3":$gray3,
+  "gray4":$gray4,
+  "gray5":$gray5,
+  "green1":$green1,
+  "green3":$green3
+);
+
+$font-family-base:'Poppins', sans-serif;
+$body-bg: $white;
+@import 'bootstrap/bootstrap.scss';
+@import 'typography.scss';
+@import 'width.scss';
+@import 'spacing';
+@import 'generics.scss';
+@import 'customize.scss';

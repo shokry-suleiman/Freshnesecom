@@ -1,0 +1,87 @@
+<header>
+    <div class="container-fluid">
+        <div class="row justify-content-between border-bottom border-gray4 ptb-8">
+            <div class="col-auto d-flex align-items-center">
+                <div class="text-secondary size-4 weight-400 cursor-pointer">Chat with us</div>
+                <div class="text-primary size-4 weight-400 mrse-20">+420 336 775 664</div>
+                <div class="text-primary size-4 cursor-pointer">info@freshnesecom.com</div>
+            </div>
+            <div class="col"></div>
+            <div class="col-auto d-flex align-items-center">
+                <div class="text-secondary size-4 weight-400 cursor-pointer">Blog</div>
+                <div class="text-secondary size-4 weight-400 mrse-20 cursor-pointer">About Us</div>
+                <div class="text-secondary size-4 weight-400 cursor-pointer">Careers</div>
+            </div>
+        </div>
+        <div class="row justify-content-between ptb-20 align-items-center">
+            <div class="col-auto">
+                <img src="../../../assets/images/Freshnesecom.svg" alt="" class="max-250 w-100 cursor-pointer" routerLink="/">
+            </div>
+            <div class="col-auto max-550 w-100">
+                <div class="input-group bg-gray5 border border-gray3 border-radius-12 ptb-1 pse-2">
+                    <button class="btn btn-gray5 weight-700 size-6 border-radius-12 text-capitalize min-160"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">{{ categoryFilter$ | async}} <img
+                            src="../../../assets/images/Vector.svg" alt="" class="mrs-2"></button>
+                    <div class="dropdown-menu">
+                        <div class="size-4 text-primary weight-400 pse-4 ptb-3 cursor-pointer text-capitalize hover"
+                            (click)="filter('all categories')">All Categories</div>
+                        <div class="size-4 text-primary weight-400 pse-4 ptb-3 cursor-pointer text-capitalize hover"
+                            *ngFor="let cat of categoryList$ | async" (click)="filter(cat)">{{cat}}</div>
+                    </div>
+                    <div class="spliter bg-gray3 mrtb-4 mrse-5"></div>
+                    <input type="text" class="form-control bg-gray5 border-0 border-radius-12"
+                        aria-label="Text input with dropdown button" placeholder="Search Products"
+                        [(ngModel)]="keySearch" (keyup.enter)="search()">
+                    <img src="../../../assets/images/ic-actions-search.svg" alt="" class="mre-4 cursor-pointer"
+                        (click)="search()">
+                </div>
+            </div>
+            <div class="col-auto d-flex align-items-center position-relative">
+                <img src="../../../assets/images/ic-actions-user.svg" alt="" class="max-60 w-100 mre-20">
+                <img src="../../../assets/images/ic-ecommerce-basket.svg" alt="" class="max-60 w-100">
+                <div class="position-absolute notify rounded-circle  size-2 text-white d-flex align-items-center justify-content-center flex-column"
+                    *ngIf="totalQuantity$ | async">
+                    {{totalQuantity$ | async}}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="bg-gray5 pse-20">
+    <div class="container-fluid">
+        <div class="row ptb-8">
+            <div class="col-auto d-flex align-items-center mre-10 cursor-pointer">
+                <div class="size-6 text-primary weight-500">Bakery</div>
+                <img src="../../../assets/images/down.svg" alt="" class="mrs-2">
+            </div>
+            <div class="col-auto d-flex align-items-center mre-10 cursor-pointer">
+                <div class="size-6 text-primary weight-500">Fruit and vegetables</div>
+                <img src="../../../assets/images/down.svg" alt="" class="mrs-2">
+            </div>
+            <div class="col-auto d-flex align-items-center mre-10 cursor-pointer">
+                <div class="size-6 text-primary weight-500">Meat and fish</div>
+                <img src="../../../assets/images/down.svg" alt="" class="mrs-2">
+            </div>
+            <div class="col-auto d-flex align-items-center mre-10 cursor-pointer">
+                <div class="size-6 text-primary weight-500">Drinks</div>
+                <img src="../../../assets/images/down.svg" alt="" class="mrs-2">
+            </div>
+            <div class="col-auto d-flex align-items-center mre-10 cursor-pointer">
+                <div class="size-6 text-primary weight-500">Kitchen</div>
+                <img src="../../../assets/images/down.svg" alt="" class="mrs-2">
+            </div>
+            <div class="col-auto d-flex align-items-center mre-10 cursor-pointer">
+                <div class="size-6 text-primary weight-500">Special nutrition</div>
+                <img src="../../../assets/images/down.svg" alt="" class="mrs-2">
+            </div>
+            <div class="col-auto d-flex align-items-center mre-10 cursor-pointer">
+                <div class="size-6 text-primary weight-500">Baby</div>
+                <img src="../../../assets/images/down.svg" alt="" class="mrs-2">
+            </div>
+            <div class="col-auto d-flex align-items-center mre-10 cursor-pointer">
+                <div class="size-6 text-primary weight-500">Pharmacy</div>
+                <img src="../../../assets/images/down.svg" alt="" class="mrs-2">
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,5 @@
+<aside>
+    <div class="text-primary size-8 weight-600 mrb-12">Categories</div>
+    <div class="text-decoration-underline size-3 text-secondary weight-400 mrb-6 cursor-pointer text-capitalize"
+        *ngFor="let cat of categoryList$ | async" (click)="filter(cat)">{{cat}}</div>
+</aside>

@@ -1,0 +1,5 @@
+<div class="row" infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+    <div class="col-4" *ngFor="let item of itemsList$ | async">
+        <app-item [item]="item"></app-item>
+    </div>
+</div>
